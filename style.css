@@ -1,0 +1,130 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0d1117;
+    color: #c9d1d9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    text-align: center;
+}
+
+.container {
+    background-color: #161b22;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+    max-width: 600px;
+    width: 90%;
+}
+
+h1 {
+    color: #58a6ff;
+    margin-bottom: 10px;
+}
+
+/* The scanning box setup */
+.scanner-box {
+    width: 200px;
+    height: 200px;
+    border: 2px dashed #58a6ff;
+    margin: 20px auto;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    background-color: #21262d;
+}
+
+/* Fake laser line */
+.scan-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #58a6ff;
+    box-shadow: 0 0 15px #58a6ff;
+    animation: scan 1.5s linear infinite;
+}
+
+@keyframes scan {
+    0% { top: 0; }
+    50% { top: 100%; }
+    100% { top: 0; }
+}
+
+button {
+    background: linear-gradient(45deg, #58a6ff, #1f6feb);
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    font-size: 1.1em;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    margin-top: 15px;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(88, 166, 255, 0.5);
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Progress bar styling */
+.progress-bar {
+    width: 100%;
+    height: 20px;
+    background-color: #30363d;
+    border-radius: 10px;
+    margin: 20px 0;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    width: 0%;
+    background-color: #58a6ff;
+    transition: width 0.5s ease;
+}
+
+#status-text {
+    font-style: italic;
+    color: #8b949e;
+}
+
+/* Rickroll styling */
+.rickroll-text {
+    color: #ff4757;
+    font-size: 2.5em;
+    animation: flash 1s infinite alternate;
+}
+
+@keyframes flash {
+    from { text-shadow: 0 0 10px #ff4757; }
+    to { text-shadow: 0 0 20px #ff4757, 0 0 30px #ff4757; }
+}
+
+.video-wrapper {
+    margin-top: 20px;
+    position: relative;
+    padding-bottom: 56.25%; /* Perfect 16:9 aspect ratio */
+    height: 0;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Celebrity Twin Finder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="step-1-intro">
+            <h1>Celebrity Twin Finder AI</h1>
+            <p>Our advanced neural network analyzes your facial geometry to find your perfect celebrity match in seconds.</p>
+            <div class="scanner-box">
+                <div class="scan-line hidden" id="scan-line"></div>
+                <p id="placeholder-text">Camera Ready</p>
+            </div>
+            <button id="start-btn">Start Face Scan</button>
+        </div>
+
+        <div id="step-2-scanning" class="hidden">
+            <h2>Analyzing Data...</h2>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progress-fill"></div>
+            </div>
+            <p id="status-text">Initializing AI models...</p>
+        </div>
+
+        <div id="step-3-result" class="hidden">
+            <h1 class="rickroll-text">You have been rickrolled!</h1>
+            <div class="video-wrapper">
+                <iframe id="rickroll-video" width="560" height="315" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <button onclick="location.reload()" id="restart-btn">Try Again?</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
